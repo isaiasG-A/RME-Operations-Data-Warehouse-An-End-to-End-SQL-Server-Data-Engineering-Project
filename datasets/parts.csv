@@ -1,0 +1,31 @@
+part_id,part_name,part_category,manufacturer,unit_cost,reorder_threshold
+PART-001,AR Drive Left Motor,Motor,Fictional Motion Co.,185.0,2
+PART-002,AR Drive Right Motor,Motor,Fictional Motion Co.,185.0,2
+PART-003,AR Drive Camera,Camera,Fictional Vision Inc.,92.5,2
+PART-004,AR Drive Top Pad,Wear Component,Fictional Robotics Ltd.,18.0,4
+PART-005,AR Drive Motherboard,Control Board,Fictional Robotics Ltd.,340.0,1
+PART-006,Photoelectric Sensor,Sensor,Fictional Sensor Works,36.0,5
+PART-007,Proximity Sensor,Sensor,Fictional Sensor Works,28.0,4
+PART-008,Industrial Cable Assembly,Cable,Fictional Electric Co.,14.5,6
+PART-009,Tote Stacker Chain,Chain,Fictional Motion Co.,75.0,2
+PART-010,SPIRAL Conveyor Slat,Wear Component,Fictional Conveyor Parts,22.0,4
+PART-011,Conveyor Bearing,Bearing,Fictional Conveyor Parts,19.0,4
+PART-012,Conveyor Drive Motor,Motor,Fictional Motion Co.,210.0,2
+PART-013,Motorized Drive Roller (MDR),Roller,Fictional Conveyor Parts,125.0,3
+PART-014,Conveyor Belt,Belt,Fictional Conveyor Parts,160.0,2
+PART-015,Drive O-Ring,Seal,Fictional Seal Supply,4.5,10
+PART-016,Barcode Scanner,Scanner,Fictional Vision Inc.,275.0,2
+PART-017,Printer Printhead,Printer Component,Fictional Print Systems,145.0,2
+PART-018,Printer Applicator Cable,Cable,Fictional Electric Co.,21.0,4
+PART-019,SPIRAL Chain,Chain,Fictional Motion Co.,88.0,2
+PART-020,Sortation Roller,Roller,Fictional Conveyor Parts,48.0,3
+PART-021,Conveyor Sprocket,Mechanical Component,Fictional Conveyor Parts,32.0,3
+PART-022,Gear Reducer,Mechanical Component,Fictional Motion Co.,130.0,2
+PART-023,Cooling Fan,Electrical Component,Fictional Electric Co.,24.0,3
+PART-024,Power Supply,Electrical Component,Fictional Electric Co.,59.0,2
+PART-025,SLAM Camera,Camera,Fictional Vision Inc.,115.0,2
+PART-026,Roller Bearing Assembly,Bearing,Fictional Conveyor Parts,26.0,4
+PART-027,Chain Tensioner,Mechanical Component,Fictional Conveyor Parts,41.0,2
+PART-028,Label Sensor,Sensor,Fictional Sensor Works,31.0,3
+PART-029,Motorized Roller O-Ring,Seal,Fictional Seal Supply,3.75,12
+PART-030,Emergency Stop Switch,Electrical Component,Fictional Electric Co.,42.0,2

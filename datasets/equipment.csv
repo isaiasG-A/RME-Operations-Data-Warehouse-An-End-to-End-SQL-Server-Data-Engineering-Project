@@ -1,0 +1,14 @@
+equipment_id,equipment_name,equipment_type,area,installation_date,equipment_status
+EQ-RSP-001,RSP AR Drive 01,AR Drive,RSP,2023-03-15,Active
+EQ-RSP-002,RSP AR Drive 02,AR Drive,RSP,2023-06-20,Active
+EQ-RSP-003,RSP Picking Station 01,Picking Station,RSP,2022-11-02,Active
+EQ-RSP-004,RSP Stowing Station 01,Stowing Station,RSP,2022-11-02,Active
+EQ-RSP-005,RSP Conveyor Belt 01,Conveyor,RSP,2021-08-10,Active
+EQ-SLAM-001,SLAM Line 01,SLAM Line,SLAM,2021-04-12,Active
+EQ-SLAM-002,SLAM Printer Applicator 01,Printer Applicator,SLAM,2022-02-08,Active
+EQ-SLAM-003,SLAM Conveyor Line 02,Conveyor,SLAM,2020-09-19,Active
+EQ-AFE-001,AFE Pack Station 01,Packing Station,AFE,2022-07-01,Active
+EQ-AFE-002,AFE Tote Stacker 01,Tote Stacker,AFE,2021-12-05,Active
+EQ-AFE-003,AFE SPIRAL 01,SPIRAL,AFE,2020-05-22,Active
+EQ-AFE-004,AFE Conveyor Belt 02,Conveyor,AFE,2022-01-18,Active
+EQ-AFE-005,AFE Sort Equipment 01,Sort Equipment,AFE,2023-01-10,Active
