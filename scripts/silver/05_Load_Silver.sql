@@ -1,3 +1,14 @@
+
+SELECT * FROM bronze.equipment
+SELECT * FROM bronze.work_orders;
+SELECT * FROM bronze.parts_usage
+SELECT * FROM bronze.parts
+SELECT * FROM bronze.inventory_transactions
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 /*
 =====================================================
 Script: Load Silver Layer
