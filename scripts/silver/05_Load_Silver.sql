@@ -6,6 +6,20 @@ Script: Load Silver Layer
 
 -- 1. Transform and load equipment
 
+
+PRINT '>> Truncating Table:  silver.equipment'
+TRUNCATE TABLE silver.equipment
+
+PRINT '>> Inserting Table: silver.equipment'
+INSERT INTO silver.equipment (
+    equipment_id,
+    equipment_name,
+    equipment_type,
+    area,
+    installation_date,
+    equipment_status
+    )
+
 SELECT
     CASE
         WHEN equipment_id LIKE 'EQ-%'
