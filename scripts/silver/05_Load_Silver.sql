@@ -45,8 +45,22 @@ Notes:
 ===============================================================================================
 */
 
+CREATE OR ALTER PROCEDURE silver.load_silver AS
+	BEGIN
+		DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
+		 BEGIN TRY
+			SET @batch_start_time = GETDATE();
+			PRINT '=====================================================================';
+			PRINT 'Loading Silver Layer';
+			PRINT '=====================================================================';
+	
+			PRINT '---------------------------------------------------------------------';
+			PRINT 'Loading Tables';
+			PRINT '---------------------------------------------------------------------';
+    
 -- 1. Transform and load equipment
 
+SET @start_time = GETDATE();
 PRINT '>> Truncating Table: silver.equipment';
 TRUNCATE TABLE silver.equipment;
 
@@ -76,10 +90,14 @@ SELECT
     installation_date,
     equipment_status
 FROM bronze.equipment;
+SET @end_time = GETDATE();
+    PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds' 
+    PRINT '---------------------------------------------------------------------------------------------------'
 
 
 -- 2. Transform and load work_orders
 
+SET @start_time = GETDATE();
 PRINT '>> Truncating Table: silver.work_orders';
 TRUNCATE TABLE silver.work_orders;
 
@@ -118,9 +136,14 @@ SELECT
     failure_description
 FROM bronze.work_orders;
 
+SET @end_time = GETDATE();
+    PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds' 
+    PRINT '---------------------------------------------------------------------------------------------------'
+
 
 -- 3. Transform and load parts_usage
 
+SET @start_time = GETDATE();
 PRINT '>> Truncating Table: silver.parts_usage';
 TRUNCATE TABLE silver.parts_usage;
 
@@ -153,9 +176,13 @@ SELECT
     usage_date
 FROM bronze.parts_usage;
 
+SET @end_time = GETDATE();
+    PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds' 
+    PRINT '---------------------------------------------------------------------------------------------------'
 
 -- 4. Transform and load parts
 
+SET @start_time = GETDATE();
 PRINT '>> Truncating Table: silver.parts';
 TRUNCATE TABLE silver.parts;
 
@@ -181,10 +208,13 @@ SELECT
     unit_cost,
     reorder_threshold
 FROM bronze.parts;
-
+SET @end_time = GETDATE();
+    PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds' 
+    PRINT '---------------------------------------------------------------------------------------------------'
 
 -- 5. Transform and load inventory_transactions
 
+SET @start_time = GETDATE();
 PRINT '>> Truncating Table: silver.inventory_transactions';
 TRUNCATE TABLE silver.inventory_transactions;
 
@@ -212,3 +242,24 @@ SELECT
     transaction_type,
     quantity_change
 FROM bronze.inventory_transactions;
+
+SET @end_time = GETDATE();
+    PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR) + 'seconds' 
+    PRINT '---------------------------------------------------------------------------------------------------'
+
+    SET @batch_end_time = GETDATE();
+			PRINT '================================================='
+			PRINT 'Loading Silver Layer is Completed'; 
+			PRINT '  - Total Load Duration: ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds';
+			PRINT '================================================='
+			END TRY
+
+		BEGIN CATCH
+		PRINT '================================================================'
+		PRINT 'Error Occurred During Loading Silver Layer'
+		PRINT 'Error Message:' + ERROR_MESSAGE();
+		PRINT 'Error Message:' + CAST (ERROR_NUMBER() AS NVARCHAR);
+		PRINT 'Error Message' + CAST (ERROR_STATE() AS NVARCHAR)
+		PRINT '================================================================'
+		END CATCH
+	END
