@@ -22,10 +22,6 @@ All datasets are fictional and created for educational and portfolio purposes.
 - [📁 Repository Structure](#-repository-structure)
 - [🚀 Getting Started](#-getting-started)
 - [✅ Data Quality](#-data-quality)
-- [🗺️ Roadmap](#️-roadmap)
-- [📚 Learning Outcomes](#-learning-outcomes)
-
----
 
 ## 🎯 Project Overview
 
@@ -216,36 +212,10 @@ The project includes checks designed to identify:
 
 Validation results are documented as the project evolves. Some checks are diagnostic and depend on confirming the relevant business rules.
 
-## 🗺️ Roadmap
-
-- [x] Create the database and Bronze tables.
-- [x] Load fictional CSV source data into Bronze.
-- [x] Create Silver tables and transformation logic.
-- [x] Develop Silver data quality checks.
-- [x] Create the initial Gold views.
-- [x] Document the initial Gold logical data model.
-- [ ] Finalize Gold-layer validation and documentation.
-- [ ] Add data architecture and logical model diagrams.
-- [ ] Review repository organization and setup instructions.
-- [ ] Expand analytical queries and project documentation.
-
-## 📚 Learning Outcomes
-
-This project provides hands-on practice with:
-
-- SQL Server database design and T-SQL development.
-- Bulk data loading and ETL workflows.
-- Medallion Architecture implementation.
-- Data cleansing, standardization, and validation.
-- Dimensional modeling and analytical views.
-- Git version control and technical documentation.
-- Building a portfolio project around a realistic operational use case.
 
 ---
 
 ## 👤 Author
 
 **Isaias**
-
-Aspiring Data Engineer | SQL Server | T-SQL | Data Warehousing
 
